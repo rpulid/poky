@@ -39,9 +39,6 @@ RDEPENDS_${PN} = "${PYTHON_PN}-unittest \
                   ${PYTHON_PN}-netclient \
                   ${PYTHON_PN}-numbers \
                   ${PYTHON_PN}-pydoc \
-                  ${PYTHON_PN}-pytest \
-                  ${PYTHON_PN}-hypothesis \
-                  ${PYTHON_PN}-sortedcontainers \
                   ${PYTHON_PN}-pkgutil \
                   ${PYTHON_PN}-email \
                   ${PYTHON_PN}-compression \
@@ -49,7 +46,11 @@ RDEPENDS_${PN} = "${PYTHON_PN}-unittest \
                   ${PYTHON_PN}-threading \
                   ${PYTHON_PN}-multiprocessing \
 "
-RDEPENDS_${PN}-ptest += "ldd"
+RDEPENDS_${PN}-ptest += "${PYTHON_PN}-pytest \
+                         ${PYTHON_PN}-hypothesis \
+                         ${PYTHON_PN}-sortedcontainers \
+                         ldd \
+"
 
 RDEPENDS_${PN}_class-native = ""
 
